@@ -1,0 +1,317 @@
+/* 
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
+- Weights: 700 */
+
+
+/* Custom Styles */
+
+/************MOBILE TO DESKTOP************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    margin: 50px 0;
+    font-family: 'Lexend Deca', Hevetica, Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 80%;
+}
+
+.card {
+    padding: 40px;
+    color: #f2f2f2;
+}
+
+.card:nth-of-type(1) {
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.card:nth-of-type(2) {
+    background-color: hsl(184, 100%, 22%);
+}
+.card:nth-of-type(3) {
+    background-color: hsl(179, 100%, 13%);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+h2 {
+    font-size: 2.5em;
+    padding: 25px 0;
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', helvetica, arial, sans-serif;
+}
+
+p {
+    line-height: 150%;
+    word-spacing: 1px;
+    font-size: .9em;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 40px;
+    text-decoration: none;
+    background-color: #f2f2f2;
+    padding: 10px 25px;
+    border-radius: 40px;
+    border: 2px solid #f2f2f2;
+}
+
+.card:nth-of-type(1) .btn {
+    color:hsl(31, 77%, 52%);
+}
+.card:nth-of-type(2) .btn {
+    color:hsl(184, 100%, 22%);
+}
+.card:nth-of-type(3) .btn {
+    color:hsl(179, 100%, 13%);
+}
+
+.card:nth-of-type(1) .btn:hover,
+.card:nth-of-type(1) .btn:active {
+    background-color:hsl(31, 77%, 52%);
+    color: #f2f2f2;
+}
+.card:nth-of-type(2) .btn:hover,
+.card:nth-of-type(2) .btn:active {
+    background-color:hsl(184, 100%, 22%);
+    color: #f2f2f2;
+}
+.card:nth-of-type(3) .btn:hover,
+.card:nth-of-type(3) .btn:active {
+    background-color:hsl(179, 100%, 13%);
+    color: #f2f2f2;
+}
+
+@media (min-width: 900px) {
+    body {
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    .card {
+        padding: 50px 40px;
+    }
+
+    .card:nth-of-type(1) {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 15px;
+    }
+    .card:nth-of-type(3) {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+     
+    h2 {
+        font-size: 2.75em;
+        padding: 40px 0;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+    .btn {
+        margin-top: 80px;
+        padding: 15px 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 65%;
+    }
+}
+
+
+
+/************DESKTOP TO MOBILE************/
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.container {
+    width: 70%;
+    max-width: 70%;
+    display: flex;
+}
+
+.card {
+    width: calc(100%/3);
+    padding: 0 50px;
+}
+.card:nth-of-type(1) {
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.card:nth-of-type(2) { background-color: hsl(184, 100%, 22%);}
+.card:nth-of-type(3) {
+    background-color: hsl(179, 100%, 13%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.icon {
+    padding: 50px 0 35px 0;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 2em;
+    padding-bottom: 35px;
+    color: #f2f2f2;
+}
+
+p {
+    color: #f2f2f2;
+    font-size: 1.2em;
+    line-height: 145%;
+    padding-bottom: 100px;
+}
+
+.btn {
+    margin-bottom: 50px;
+    background-color: #f2f2f2;
+    border: 2px solid #f2f2f2;
+    border-radius: 40px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #e38826;
+}
+
+.card:nth-of-type(2) .btn {color:#006970;}
+.card:nth-of-type(3) .btn { color:#004241;}
+
+.btn:hover,
+.btn:active {
+    background-color: transparent;
+    color: #f2f2f2;
+}
+.card:nth-of-type(2) .btn:hover,
+.card:nth-of-type(2) .btn:active {
+    color: #f2f2f2;
+}
+.card:nth-of-type(3) .btn:hover,
+.card:nth-of-type(3) .btn:active {
+    color: #f2f2f2;
+} */
+
+/************DESKTOP TO MOBILE QUERIES************/
+/* @media (max-width: 1200px) {
+    .container {
+        width: 80%;
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 950px) {
+    .container {
+        flex-direction: column;
+        width: 60%;
+        max-width: 60%;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card:nth-of-type(1) {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+    .card:nth-of-type(3) {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .icon {
+        padding: 20px 0;
+    }
+
+    h2 {
+        padding-bottom: 20px;
+    }
+
+    p {
+        padding-bottom: 50px;
+    }
+
+    .btn {
+        margin-bottom: 20px;
+        /* padding: 10px 20px; */
+    
+
+    /* @media (max-width: 600px) {
+        
+        .container {
+            width: 90%;
+            max-width: 90%;
+        }
+    } */
